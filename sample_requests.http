@@ -1,0 +1,72 @@
+### Get all books (RestClient)
+GET http://localhost:8080/api/books
+
+###
+
+### Get book by ID (RestClient)
+GET http://localhost:8080/api/books/1
+
+###
+
+### Get non-existing book (RestClient)
+GET http://localhost:8080/api/books/1000
+
+###
+
+### Chaos book 1 (RestClient)
+GET http://localhost:8080/api/books/991
+
+###
+
+### Chaos book 2 (RestClient)
+GET http://localhost:8080/api/books/992
+
+###
+
+### Chaos book 3 (RestClient)
+GET http://localhost:8080/api/books/993
+
+###
+
+### Get all books (WebClient)
+GET http://localhost:8080/api/books/async
+
+###
+
+### Get book by ID (WebClient)
+GET http://localhost:8080/api/books/async/1
+
+###
+
+### Get non-existing book (WebClient)
+GET http://localhost:8080/api/books/async/1000
+
+###
+
+### Chaos book 1 (WebClient)
+GET http://localhost:8080/api/books/async/991
+
+###
+
+### Chaos book 2 (WebClient)
+GET http://localhost:8080/api/books/async/992
+
+###
+
+### Chaos book 3 (WebClient)
+GET http://localhost:8080/api/books/async/993
+
+###
+
+### Fetch two books in parallel
+GET http://localhost:8080/api/books/async/parallel?id1=1&id2=2
+
+###
+
+### Parallel - one valid, one invalid
+GET http://localhost:8080/api/books/async/parallel?id1=1&id2=1000
+
+###
+
+### Parallel - chaos books
+GET http://localhost:8080/api/books/async/parallel?id1=991&id2=992
